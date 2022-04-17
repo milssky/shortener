@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Сокращатель 4000</title>
+        <style>
+            .container {
+                margin: 0 auto;
+                width: 700px;
+                height: 300px;
+                background: #CCC;
+                text-align: center;
+                padding-top:20px;
+                font-size: 26px;
+            }
+            input {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Сократить</button>
+            </form>
+            <h1><a id="short_url" href="{{ short_url }}" target="blank">{{ short_url }}</a></h1>
+        </div>
+    </body>
+</html>
